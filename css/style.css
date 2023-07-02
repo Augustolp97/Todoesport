@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+
+button{
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    background-color: #6088AE;
+}
+
+button:hover{
+    background-color: #312844;
+}
+
+
+header .container{
+    background-color:#362948;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo{
+    margin: 0;
+    width: 110px; 
+    
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+
+header a{
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    
+}
+
+header a:hover{
+    color: #34B994;  
+}
+
+#news{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/images/Backgroundnews.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#news h1{
+    color: white;
+}
+
+#fotosyvideos{
+    background-color: rgb(215, 215, 215);
+}
+
+#fotosyvideos .container{
+    text-align: center;
+    padding: 100px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fotosyvideos button{
+    width: 300px;
+    margin-top: 35px;
+}
+
+#nosotros{
+    background-color: rgb(30 ,30 ,30);
+    color: white;
+    text-align: center;
+}
+
+#nosotros .container{
+    padding: 150px 0px;
+}
+
+#nosotros h2{
+    margin-top: 0;
+    font-size: 3.2em;
+    
+}
+
+#nosotros p{
+    display: none;
+}
+
+#nosotros .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 8px 15px 30px rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    background-color: #000000a8;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/images/Instagram.jpeg");
+}
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/images/facebook.jpg");
+}
+
+.carta:last-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/images/youtube.jpeg");
+}
+
+
+#contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    color: white;
+    height: 80vh;
+}
+
+
+footer{
+    background-color: rgb(230, 230, 230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width:720px){
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+
+    
+    header nav{
+       display: flex;
+       flex-direction: row;
+
+    }
+
+    header a{
+        padding: 15px;
+        font-size: 18px;
+    }
+
+
+    #fotosyvideos .container{
+        text-align: center;
+        padding: 100px 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+        grid-template-rows: 0.1fr 0.7fr 0.7fr;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: 
+        "titulo titulo titulo titulo"
+        "parrafo parrafo parrafo parrafo"
+        "video video boton boton";
+    }
+    
+    #fotosyvideos h2{
+        grid-area: titulo;
+    }
+    
+    #fotosyvideos iframe{
+        grid-area: video;
+    }
+    
+    
+    #fotosyvideos p{
+        grid-area: parrafo;
+    }
+    
+    
+    #fotosyvideos button{
+        grid-area: boton;
+        width: 220px;
+        height: 80px;
+        align-self: center;
+    }
+   
+        
+}
