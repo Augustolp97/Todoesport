@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TodoEsSport</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,28 +14,38 @@
 <body>
     <header>
         <div class="container">
-            <img src="/images/Logo.png" class="logo" alt="logo">
+
             <nav>
-                <a href="Inicio">Inicio</a>
-                <a href="/Pages/noticias.html">Noticias</a>
-                <a href="/Pages/multimedia.html">Multimedia</a>
-                <a href="/Pages/nosotros.html">Nosotros</a>
-                <a href="/Pages/contacto.html">Contacto</a>
+            <div>
+                <img src="/images/Logo.png" alt="" class="logo">
+            </div>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="icon"><i class="fi fi-bs-menu-burger"></i>
+                    </label>
+                <ul class="menu">
+                    <li><a class="active" href="Inicio">Inicio</a></li>
+                    <li><a href="/Pages/noticias.html">Noticias</a></li>
+                    <li><a href="/Pages/multimedia.html">Multimedia</a></li>
+                    <li><a href="/Pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="/Pages/contacto.html">Contacto</a></li>
+                </ul>
             </nav>
         </div>
     </header>
         <section id="news">
             <h1>Enterate de Todas <br>Las Noticias!</h1>
-            <button>NOTICIAS!</button>
+            <a href="/Pages/noticias.html"><button>NOTICIAS!</button>
+            </a>
         </section>
 
         <section id="fotosyvideos">
             <div class="container">
                 <h2>Fotos y Videos</h2>
-                <p>Aca podes encontar todas las imagenes y videos de los mejores moentos del deporte</p>
+                <p>Aca podes encontrar lo mejor del deporte</p>
                 <iframe width="450" height="270" src="https://www.youtube.com/embed/-jtV7IJP8NU?autoplay=1&mute=1" title="YouTube video player" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
-                <button>Ver mas...</button>
+                <a href="/Pages/multimedia.html"><button>Ver mas...</button>
+                </a>
             </div>
         </section>
 
@@ -70,7 +81,8 @@
         <section id="contacto">
             <div class="container">
                 <div class="img-container"></div>
-                <button>Contactate</button>
+                <a href="/Pages/contacto.html"><button>Contactate</button>
+                </a>
             </div>
         </section>
     
